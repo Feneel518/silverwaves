@@ -1,16 +1,28 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {
+  Corben,
+  Cormorant_Garamond,
+  Geist,
+  Geist_Mono,
+  Metamorphous,
+  Montaga,
+  Montserrat,
+} from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
+import Cursor from "@/components/ui/cursor";
+import Navbar from "@/components/Navbar/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const corben = Cormorant_Garamond({
+  variable: "--font-corben",
   subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -26,9 +38,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        className={`${corben.variable} ${montserrat.variable} antialiased max-w-screen overflow-x-hidden`}>
+        <Navbar></Navbar>
         {children}
         <Toaster richColors />
+        <Cursor></Cursor>
       </body>
     </html>
   );

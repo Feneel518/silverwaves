@@ -1,9 +1,11 @@
+import HeroSection from "@/components/home/HeroSection";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex items-center justify-center min-h-screen text-9xl">
-      Hello
+    <div className="">
+      <HeroSection></HeroSection>
+      <div className="min-h-screen"></div>
     </div>
   );
 }
