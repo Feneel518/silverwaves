@@ -143,8 +143,8 @@ export function BookingBar({
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center gap-4">
-        <div className="md:hidden w-[90%] mx-auto h-16 bg-forest/90 backdrop-blur-md border border-white/10 shadow-[0_10px_35px_rgba(0,0,0,0.35)] rounded-full flex items-center justify-center ">
+      <div className="flex flex-col items-center justify-center gap-4 md:hidden">
+        <div className=" w-[90%] mx-auto h-16 bg-forest/90 backdrop-blur-md border border-white/10 shadow-[0_10px_35px_rgba(0,0,0,0.35)] rounded-full flex items-center justify-center ">
           <div className="flex items-stretch gap-2 md:gap-3 w-full justify-between px-4">
             {/* Check In */}
             <DatePill
